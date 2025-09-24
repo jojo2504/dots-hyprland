@@ -12,9 +12,10 @@ pragma ComponentBehavior: Bound
 Singleton {
     property var clock: SystemClock {
         id: clock
-        precision: GlobalStates.screenLocked ? SystemClock.Seconds : SystemClock.Minutes // Hack to ensure clock is correct after waking up from suspend
+        precision: GlobalStates.screenLocked ? SystemClock.Minutes : SystemClock.Seconds
     }
     property string time: Qt.locale().toString(clock.date, Config.options?.time.format ?? "hh:mm")
+    property string time2: Qt.locale().toString(clock.date, Config.options?.time.format2 ?? "hh:mm:ss")
     property string shortDate: Qt.locale().toString(clock.date, Config.options?.time.shortDateFormat ?? "dd/MM")
     property string date: Qt.locale().toString(clock.date, Config.options?.time.dateFormat ?? "dddd, dd/MM")
     property string collapsedCalendarFormat: Qt.locale().toString(clock.date, "dd MMMM yyyy")

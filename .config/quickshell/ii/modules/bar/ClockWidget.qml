@@ -21,7 +21,7 @@ Item {
         StyledText {
             font.pixelSize: Appearance.font.pixelSize.large
             color: Appearance.colors.colOnLayer1
-            text: DateTime.time
+            text: DateTime.time2
         }
 
         StyledText {
