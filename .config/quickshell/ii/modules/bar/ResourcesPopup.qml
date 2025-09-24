@@ -140,7 +140,7 @@ StyledPopup {
                 ResourceItem {
                     icon: "device_thermostat"
                     label: Translation.tr("Temp:")
-                    value: ResourceTemp.cpuEdgeTemp //(ResourceTemp.cpuEdgeTemp > 60 ? Translation.tr("High") : ResourceUsage.cpuEdgeTemp > 45 ? Translation.tr("Medium") : Translation.tr("Low")) + ` (${ResourceUsage.cpuEdgeTemp}°C)`
+                    value: ResourceTemp.cpuEdgeTemp
                 }
             }
         }
@@ -162,7 +162,7 @@ StyledPopup {
                 ResourceItem {
                     icon: "device_thermostat"
                     label: Translation.tr("Temp:")
-                    value: ResourceTemp.gpuEdgeTemp //(ResourceTemp.cpuEdgeTemp > 60 ? Translation.tr("High") : ResourceUsage.cpuEdgeTemp > 45 ? Translation.tr("Medium") : Translation.tr("Low")) + ` (${ResourceUsage.cpuEdgeTemp}°C)`
+                    value: ResourceTemp.gpuEdgeTemp
                 }
             }
         }

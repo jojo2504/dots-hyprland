@@ -1,7 +1,7 @@
 pragma Singleton
 pragma ComponentBehavior: Bound
 
-import qs.modules.common
+import "root:/modules/common"
 import QtQuick
 import Quickshell
 import Quickshell.Io
@@ -21,6 +21,9 @@ Singleton {
     property double cpuUsage: 0
     property var previousCpuStats
 
+    property double gpuUsage: 0
+    property double gpuMemUsage: 0
+
 	Timer {
 		interval: 1
         running: true 
@@ -29,6 +32,8 @@ Singleton {
             // Reload files
             fileMeminfo.reload()
             fileStat.reload()
+            fileGpuUsage.reload()
+            fileGpuMemUsagePercent.reload()
 
             // Parse memory and swap usage
             const textMeminfo = fileMeminfo.text()
@@ -53,10 +58,21 @@ Singleton {
 
                 previousCpuStats = { total, idle }
             }
+
+            // Get GPU usage
+            const gpuUsageStat = fileGpuUsage.text()
+            gpuUsage = Number(gpuUsageStat/100)
+            
+            // Get GPU mem usage
+            const gpuMemUsageStat = fileGpuMemUsagePercent.text()
+            gpuMemUsage = Number(gpuMemUsageStat/100)
+
             interval = Config.options?.resources?.updateInterval ?? 3000
         }
 	}
 
 	FileView { id: fileMeminfo; path: "/proc/meminfo" }
     FileView { id: fileStat; path: "/proc/stat" }
+    FileView { id: fileGpuUsage; path: "/sys/class/drm/card1/device/gpu_busy_percent" }
+    FileView { id: fileGpuMemUsagePercent; path: "/sys/class/drm/card1/device/mem_busy_percent" }
 }
