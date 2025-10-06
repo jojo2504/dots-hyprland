@@ -79,43 +79,6 @@ ContentPage {
     }
 
     ContentSection {
-        icon: "point_scan"
-        title: Translation.tr("Crosshair overlay")
-
-        MaterialTextArea {
-            Layout.fillWidth: true
-            placeholderText: Translation.tr("Crosshair code (in Valorant's format)")
-            text: Config.options.crosshair.code
-            wrapMode: TextEdit.Wrap
-            onTextChanged: {
-                Config.options.crosshair.code = text;
-            }
-        }
-
-        RowLayout {
-            StyledText {
-                Layout.leftMargin: 10
-                color: Appearance.colors.colSubtext
-                font.pixelSize: Appearance.font.pixelSize.smallie
-                text: Translation.tr("Press Super+G to toggle appearance")
-            }
-            Item { Layout.fillWidth: true }
-            RippleButtonWithIcon {
-                id: editorButton
-                buttonRadius: Appearance.rounding.full
-                materialIcon: "open_in_new"
-                mainText: Translation.tr("Open editor")
-                onClicked: {
-                    Qt.openUrlExternally(`https://www.vcrdb.net/builder?c=${Config.options.crosshair.code}`);
-                }
-                StyledToolTip {
-                    text: "www.vcrdb.net"
-                }
-            }
-        }
-    }
-
-    ContentSection {
         icon: "call_to_action"
         title: Translation.tr("Dock")
 

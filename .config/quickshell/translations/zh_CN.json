@@ -456,7 +456,6 @@
   "Center clock": "居中时钟",
   "Press Super+G to toggle appearance": "按下 Super+G 切换准星显示",
   "Lock screen": "锁屏",
-  "Crosshair code (in Valorant's format)": "准星代码 （瓦罗兰特格式）",
   "Random: osu! seasonal": "随机：osu! 季节性壁纸",
   "Work safety": "安全模式",
   "Require password to power off/restart": "需要密码来关机或重启",
@@ -466,7 +465,6 @@
   "Security": "安全",
   "Clock style": "时钟样式",
   "Style: Blurred": "样式：模糊",
-  "Crosshair overlay": "射击准星叠加",
   "Locked": "已锁定",
   "Wallpaper safety enforced": "已启用壁纸安全模式"
 }
