@@ -141,33 +141,6 @@ StyledPopup {
                     label: Translation.tr("Load:")
                     value: (ResourceUsage.cpuUsage > 0.8 ? Translation.tr("High") : ResourceUsage.cpuUsage > 0.4 ? Translation.tr("Medium") : Translation.tr("Low")) + ` (${Math.round(ResourceUsage.cpuUsage * 100)}%)`
                 }
-                ResourceItem {
-                    icon: "device_thermostat"
-                    label: Translation.tr("Temp:")
-                    value: ResourceTemp.cpuEdgeTemp
-                }
-            }
-        }
-
-        ColumnLayout {
-            Layout.alignment: Qt.AlignTop
-            spacing: 8
-
-            ResourceHeaderItem {
-                icon: "video_settings"
-                label: "GPU"
-            }
-            ColumnLayout {
-                ResourceItem {
-                    icon: "bolt"
-                    label: Translation.tr("Load:")
-                    value: (ResourceUsage.gpuUsage > 0.8 ? Translation.tr("High") : ResourceUsage.gpuUsage > 0.4 ? Translation.tr("Medium") : Translation.tr("Low")) + ` (${Math.round(ResourceUsage.gpuUsage * 100)}%)`
-                }
-                ResourceItem {
-                    icon: "device_thermostat"
-                    label: Translation.tr("Temp:")
-                    value: ResourceTemp.gpuEdgeTemp
-                }
             }
         }
     }
