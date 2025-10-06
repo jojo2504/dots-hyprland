@@ -34,28 +34,6 @@ ContentPage {
         }
 
         ContentSubsection {
-            title: Translation.tr("Clock style")
-            ConfigSelectionArray {
-                currentValue: Config.options.background.clock.style
-                onSelected: newValue => {
-                    Config.options.background.clock.style = newValue;
-                }
-                options: [
-                    {
-                        displayName: Translation.tr("Simple digital"),
-                        icon: "timer_10",
-                        value: "digital"
-                    },
-                    {
-                        displayName: Translation.tr("Material cookie"),
-                        icon: "cookie",
-                        value: "cookie"
-                    },
-                ]
-            }
-        }
-
-        ContentSubsection {
             title: Translation.tr("Wallpaper parallax")
 
             ConfigSwitch {

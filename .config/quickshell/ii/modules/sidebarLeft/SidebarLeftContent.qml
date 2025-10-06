@@ -81,26 +81,11 @@ Item {
                     radius: Appearance.rounding.small
                 }
             }
-
-            contentChildren: [
-                ...(Config.options.policies.ai !== 0 ? [aiChat.createObject()] : []),
-                translator.createObject(),
-                ...(Config.options.policies.weeb === 0 ? [] : [anime.createObject()])
-            ]
         }
-
-        Component {
-            id: aiChat
-            AiChat {}
-        }
+        
         Component {
             id: translator
             Translator {}
-        }
-        Component {
-            id: anime
-            Anime {}
-        }
-        
+        }        
     }
 }
