@@ -330,13 +330,6 @@ Variants {
                             }
                         }
                     }
-
-                    Loader {
-                        id: cookieClockLoader
-                        visible: root.clockStyle === "cookie"
-                        active: visible
-                        sourceComponent: CookieClock {}
-                    }
                 }
 
                 Item {
