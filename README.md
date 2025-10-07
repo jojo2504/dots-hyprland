@@ -1,3 +1,6 @@
+> [!CAUTION]
+> Debloated fork of the main repo, many things won't work anymore and my even be buggy until everything is resolved
+
 <div align="center">
     <h1>【 end_4's Hyprland dotfiles 】</h1>
     <h3></h3>
